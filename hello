@@ -1,4 +1,11 @@
 hello
 1. git init  --> intialise the given directory 
 2. git status
-3. 
+3. git add .
+4. red - file is not ready to be executed
+5. green - file is ready
+6. -m : main 
+master - main branch 
+slave - sub branch
+git branch -M main --> main branch
+
