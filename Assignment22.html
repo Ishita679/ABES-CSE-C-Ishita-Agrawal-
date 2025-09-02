@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>bus seat booking</title>
+    <title>Bus seat book</title>
     <style>
       .navbar {
         width: 100%;
@@ -43,35 +43,28 @@
     </style>
   </head>
   <body>
-    <div class="navbar">Welcome to bus booking system</div>
-    <div class="center-box-container">
-      <div class="center-box">
-        <img src="Untitled.jpeg" alt="Bus Image" />
-        <form>
-          <label>User detail</label><br />
-          <label>Name</label>
-          <input type="text" /><br />
-          <label>Password</label>
-          <input type="password" /><br />
+    <center>
+      <div class="navbar">Welcome to bus booking system</div>
+      <div class="center-box-container">
+        <div class="center-box">
+          <img src="Untitled.jpeg" alt="Bus Image" />
+          <form>
+            <label>Select Seat Mode</label><br />
+            <input type="radio" />
+            <label>AC</label><br />
+            <input type="radio" />
+            <label>Non-AC</label><br /><br />
 
-          <label>User gender</label><br />
-          <input type="radio" name="gender" />
-          <label>Male</label>
-          <input type="radio" name="gender" />
-          <label>Female</label>
-          <br /><br />
-          <label>Select city</label>
-          <select>
-            <option>Ghaziabad</option>
-            <option>Noida</option>
-            <option>Delhi</option>
-          </select>
-          <br /><br />
-          <button type="submit">
-            <a href="Assignment22.html"> Seat Book</a>
-          </button>
-        </form>
+            <label>Payment Mode</label><br />
+            <input type="radio" />
+            <label>UPI</label><br />
+            <input type="radio" />
+            <label>Card</label>
+            <br /><br />
+            <p>Thank You</p>
+          </form>
+        </div>
       </div>
-    </div>
+    </center>
   </body>
 </html>
