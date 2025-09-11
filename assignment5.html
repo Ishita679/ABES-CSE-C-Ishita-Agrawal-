@@ -15,12 +15,12 @@
       .card {
         background: #fff;
         border-radius: 12px;
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
         width: 320px;
         padding: 32px 24px;
         display: flex;
         flex-direction: column;
         align-items: center;
+        border: solid 5px black;
       }
       .logo {
         width: 60px;
@@ -35,12 +35,12 @@
         margin-bottom: 20px;
         padding: 8px 0;
       }
-      .counter-controls {
+      .controls {
         display: flex;
         gap: 16px;
         margin-bottom: 16px;
       }
-      .counter-controls button {
+      .controls button {
         font-size: 1.5em;
         width: 48px;
         height: 48px;
@@ -55,7 +55,7 @@
     <div class="card">
       <img src="logo.jpeg" />
       <h2 id="heading">Counter</h2>
-      <div class="counter-controls">
+      <div class="controls">
         <button onclick="decrement()">-</button>
         <button onclick="increment()">+</button>
       </div>
@@ -63,7 +63,7 @@
     </div>
     <script>
       let count = 0;
-      function updateCounter() {
+      function update() {
         document.getElementById("counterValue").textContent = count;
         if (count < 0) {
           alert("minimum value should be zero");
@@ -74,13 +74,16 @@
       }
       function decrement() {
         count--;
-        updateCounter();
+        update();
       }
       function increment() {
         count++;
-        updateCounter();
+        update();
       }
       document.body.style.backgroundColor = "beige";
     </script>
+    <button>
+      <a href = "assignment51.html"> Image hide</a>
   </body>
+    </button>
 </html>
