@@ -53,6 +53,7 @@
   </head>
   <body>
     <div class="card">
+      <img src="logo.jpeg" />
       <h2 id="heading">Counter</h2>
       <div class="counter-controls">
         <button onclick="decrement()">-</button>
@@ -64,6 +65,12 @@
       let count = 0;
       function updateCounter() {
         document.getElementById("counterValue").textContent = count;
+        if (count < 0) {
+          alert("minimum value should be zero");
+        }
+        if (count > 10) {
+          alert("maximum value should be ten");
+        }
       }
       function decrement() {
         count--;
