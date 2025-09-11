@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter Card</title>
+    <style>
+      body {
+        background: #f7f7f7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      .card {
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        width: 320px;
+        padding: 32px 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .logo {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 16px;
+      }
+      #heading {
+        text-align: center;
+        background-color: burlywood;
+        width: 100%;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        padding: 8px 0;
+      }
+      .counter-controls {
+        display: flex;
+        gap: 16px;
+        margin-bottom: 16px;
+      }
+      .counter-controls button {
+        font-size: 1.5em;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        border: none;
+        background-color: brown;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h2 id="heading">Counter</h2>
+      <div class="counter-controls">
+        <button onclick="decrement()">-</button>
+        <button onclick="increment()">+</button>
+      </div>
+      <p id="counterValue">0</p>
+    </div>
+    <script>
+      let count = 0;
+      function updateCounter() {
+        document.getElementById("counterValue").textContent = count;
+      }
+      function decrement() {
+        count--;
+        updateCounter();
+      }
+      function increment() {
+        count++;
+        updateCounter();
+      }
+      document.body.style.backgroundColor = "beige";
+    </script>
+  </body>
+</html>
