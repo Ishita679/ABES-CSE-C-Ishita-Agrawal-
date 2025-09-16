@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Cards</title>
+    <style>
+      body {
+        margin: 20px;
+        display: flex;
+        gap: 20px;
+      }
+      .card {
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 15px;
+        width: 250px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
+      .student {
+        margin: 8px 0;
+        padding: 6px;
+        background: #f9f9f9;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card" id="it">
+      <h3>IT Students</h3>
+    </div>
+    <div class="card" id="other">
+      <h3>Other Class Students</h3>
+    </div>
+
+    <script>
+      const students = [
+        { name: "Student 1", rollno: 101, class: "IT" },
+        { name: "Student 2", rollno: 102, class: "CSE" },
+        { name: "Student 3", rollno: 103, class: "CS" },
+        { name: "Student 4", rollno: 104, class: "IT" },
+        { name: "Student 5", rollno: 105, class: "IT" },
+      ];
+
+      const itDiv = document.getElementById("it");
+      const otherDiv = document.getElementById("other");
+
+      for (let i = 0; i < students.length; i++) {
+        const s = students[i];
+        const div = document.createElement("div");
+        div.className = "student";
+        div.innerHTML = `
+          Name: ${s.name} <br>
+          Roll No: ${s.rollno} <br>
+          Class: ${s.class}
+        `;
+
+        if (s.class === "IT") {
+          itDiv.appendChild(div);
+        } else {
+          otherDiv.appendChild(div);
+        }
+      }
+    </script>
+  </body>
+</html>
