@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Store</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 20px;
+        background: #f4f4f4;
+      }
+      .card {
+        background: #fff;
+        width: 200px;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: center;
+      }
+      .card img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+      .card h3 {
+        margin: 10px 0;
+        font-size: 18px;
+      }
+      .card p {
+        font-size: 16px;
+        font-weight: bold;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body id="demo">
+    <script>
+      const phone = [
+        { name: "Game1", price: 100, image: "game1.jpeg" },
+        { name: "Game2", price: 150, image: "game2.jpeg" },
+        { name: "Game3", price: 250, image: "game3.png" },
+      ];
+
+      let output = "";
+      phone.forEach((item) => {
+        output += `
+          <div class="card">
+            <img src="${item.image}" alt="${item.name}" />
+            <h3>${item.name}</h3>
+            <p>Price: $${item.price}</p>
+          </div>
+        `;
+      });
+
+      document.getElementById("demo").innerHTML = output;
+    </script>
+  </body>
+</html>
