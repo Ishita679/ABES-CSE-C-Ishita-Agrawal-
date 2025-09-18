@@ -38,23 +38,37 @@
         font-weight: bold;
         color: #333;
       }
+      .card button {
+        margin-top: 10px;
+        padding: 8px 12px;
+        border: none;
+        background: #007bff;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+      }
+      .card button:hover {
+        background: #0056b3;
+      }
     </style>
   </head>
   <body id="demo">
     <script>
-      const phone = [
+      const watch = [
         { name: "Watch1", price: 100, image: "watch1.jpeg" },
         { name: "Watch2", price: 150, image: "watch2.jpeg" },
         { name: "Watch3", price: 250, image: "watch3.jpg" },
       ];
 
       let output = "";
-      phone.forEach((item) => {
+      watch.forEach((item) => {
         output += `
           <div class="card">
-            <img src="${item.image}" alt="${item.name}" />
+            <img src="${item.image}" alt="${item.name}">
             <h3>${item.name}</h3>
-            <p>Price: $${item.price}</p>
+            <p>₹${item.price}</p>
+            <button>Buy Now</button>
           </div>
         `;
       });

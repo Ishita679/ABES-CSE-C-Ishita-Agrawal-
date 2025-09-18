@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Game Store</title>
+    <title>Phone Store</title>
     <style>
       body {
         font-family: Arial, sans-serif;
@@ -52,9 +52,9 @@
       phone.forEach((item) => {
         output += `
           <div class="card">
-            <img src="${item.image}" alt="${item.name}" />
+            <img src="${item.image}" alt="${item.name}">
             <h3>${item.name}</h3>
-            <p>Price: $${item.price}</p>
+            <p>₹${item.price}</p>
           </div>
         `;
       });
