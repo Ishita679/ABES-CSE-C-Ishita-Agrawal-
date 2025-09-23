@@ -4,6 +4,55 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      #output {
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #000;
+        width: fit-content;
+        align-items: center;
+        background-color: #f0f0f0;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <label for="adi">Enter your name</label>
+    <input type="text" id="adi" />
+
+    <p>Know language</p>
+    <label for="lang1">Enter the language</label>
+    <input type="text" id="lang1" /><br />
+    <label for="lang2">Enter the language</label>
+    <input type="text" id="lang2" /><br />
+    <label for="lang3">Enter the language</label>
+    <input type="text" id="lang3" /><br /><br />
+
+    <button onclick="resume()">Submit</button>
+
+    <div id="output">
+      <img src="ABES-CSE-C(Ishita Agrawal)/images.jpeg" />
+    </div>
+
+    <script>
+      function resume() {
+        const name = document.getElementById("adi").value;
+        const lang1 = document.getElementById("lang1").value;
+        const lang2 = document.getElementById("lang2").value;
+        const lang3 = document.getElementById("lang3").value;
+        document.getElementById("output").innerHTML =
+          "Name: " +
+          name +
+          "<br>" +
+          "Know Languages: " +
+          "Language 1: " +
+          lang1 +
+          "<br>" +
+          "Language 2: " +
+          lang2 +
+          "<br>" +
+          "Language 3: " +
+          lang3;
+      }
+    </script>
+  </body>
 </html>
