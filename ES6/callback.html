@@ -7,13 +7,43 @@
   </head>
   <body>
     <script>
-      function sum(a, b) {
-        console.log(a + b);
+      //   function sum(a, b) {
+      //     console.log(a + b);
+      //   }
+      //   function cal(a, b, sumcallback) {
+      //     sumcallback(a, b);
+      //   }
+      //   cal(10, 20, sum);
+
+      //   function getData(dataid) {
+      //     setTimeout(() => {
+      //       console.log("data of id: " + dataid);
+      //     }, 2000);
+      //   }
+      //   getData(1);
+      //   getData(2);
+      //   getData(3); // nested callback to avoid callback hell
+
+      //callback hell(nested callback)
+      function getData(dataid, getNextData) {
+        setTimeout(() => {
+          console.log("data of id: " + dataid);
+          if (getNextData) {
+            getNextData();
+          }
+        }, 2000);
       }
-      function cal(a, b, sumcallback) {
-        sumcallback(a, b);
-      }
-      cal(10, 20, sum);
+      getData(1, () => {
+        getData(2, () => {
+          getData(3, () => {
+            getData(4, () => {
+              getData(5, () => {
+                console.log("all data received");
+              });
+            });
+          });
+        });
+      }); // to avoid callback hell we use promises
     </script>
   </body>
 </html>
